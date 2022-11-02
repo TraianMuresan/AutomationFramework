@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.time.Duration;
+
 public class ShareData {
     public WebDriver driver;
 
@@ -15,6 +17,8 @@ public class ShareData {
         driver = new ChromeDriver();
         driver.get("https://demo.automationtesting.in/Index.html");
         driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @AfterMethod
