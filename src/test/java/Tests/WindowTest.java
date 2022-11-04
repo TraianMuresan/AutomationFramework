@@ -6,10 +6,8 @@ import HelpMetods.WindowMetods;
 import Share.ShareData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WindowTest extends ShareData {
@@ -19,7 +17,6 @@ public class WindowTest extends ShareData {
         ElementMetods elementMetods=new ElementMetods(driver);
         PageMetods pageMetods=new PageMetods(driver);
         WindowMetods windowMetods=new WindowMetods(driver);
-
 
         WebElement skipsighnin = driver.findElement(By.id("btn2"));
         elementMetods.clickelement(skipsighnin);
@@ -51,7 +48,7 @@ public class WindowTest extends ShareData {
         windowsButtons.get(2).click();
 
         WebElement tabsclick=driver.findElement(By.cssSelector("#Multiple button"));
-        tabsclick.click();
+        elementMetods.clickelement(tabsclick);
 
         windowMetods.gotoSpecificWindow(2);
         windowMetods.closWindow();
