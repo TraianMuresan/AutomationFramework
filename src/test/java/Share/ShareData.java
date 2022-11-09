@@ -11,8 +11,6 @@ public class ShareData {
 
     @BeforeMethod
     public void preparedriver(){
-        //Setam driverul de Crome
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://demo.automationtesting.in/Index.html");
         driver.manage().window().maximize();
