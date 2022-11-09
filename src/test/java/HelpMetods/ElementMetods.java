@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -29,6 +30,12 @@ public class ElementMetods {
         waitvisible(element);
         Actions action=new Actions(driver);
         action.moveToElement(element).perform();
+
+    }
+    public void validateElementText(WebElement element, String value){
+        waitvisible(element);
+        String actuelerror=element.getText();
+        Assert.assertEquals(actuelerror,value);
 
     }
 }
