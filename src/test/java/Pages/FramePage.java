@@ -13,10 +13,10 @@ public class FramePage extends BasePage{
     }
 
     @FindBy (css = ".nav-tabs>li>a")
-    public List<WebElement> frameOptions;
+    private List<WebElement> frameOptions;
 
     @FindBy (css = "input[type='text']")
-    public WebElement input;
+    private WebElement input;
 
     public void singleFrame(String value){
         frameOptions.get(0).click();
@@ -30,6 +30,5 @@ public class FramePage extends BasePage{
         frameMetods.switchFrame(driver.findElement(By.cssSelector("iframe[src='MultipleFrames.html']")));
         frameMetods.switchFrame(driver.findElement(By.cssSelector("iframe[src='SingleFrame.html']")));
         input.sendKeys(value);
-
     }
 }

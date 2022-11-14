@@ -21,5 +21,4 @@ public class BasePage {
         frameMetods=new FrameMetods(driver);
         windowMetods=new WindowMetods(driver);
     }
-
 }

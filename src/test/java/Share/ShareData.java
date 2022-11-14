@@ -2,15 +2,18 @@ package Share;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< HEAD
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+=======
+
+>>>>>>> POMBranch
 import java.time.Duration;
 
 public class ShareData {
     public WebDriver driver;
 
-    @BeforeMethod
     public void preparedriver(){
 
         Boolean cicd=Boolean.parseBoolean(System.getProperty("cicd"));
@@ -25,7 +28,6 @@ public class ShareData {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-    @AfterMethod
     public void cleardriver(){
         driver.quit();
     }

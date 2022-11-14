@@ -3,10 +3,10 @@ package Tests;
 import Pages.AlertPage;
 import Pages.IndexPage;
 import Pages.RegisterPage;
-import Share.ShareData;
+import Share.Hooks;
 import org.testng.annotations.Test;
 
-public class AlertTest extends ShareData {
+public class AlertTest extends Hooks {
 
     @Test
     public void metodatest() {
@@ -20,6 +20,6 @@ public class AlertTest extends ShareData {
         AlertPage alertPage=new AlertPage(driver);
         alertPage.acceptAlertProcess();
         alertPage.dismissAlertProcess();
-        alertPage.fillAlertProcess("Era Ceva");
+        alertPage.fillAlertProcess(propertyFile.getValue("alertValue"));
     }
 }
