@@ -10,13 +10,13 @@ public class LoginPage extends BasePage{
     }
 
     @FindBy(css = "input[placeholder='E mail']")
-    public WebElement emailelement;
+    private WebElement emailelement;
     @FindBy(xpath = "//input[@placeholder='Password']")
-    public WebElement passwordelement;
+    private WebElement passwordelement;
     @FindBy(id ="enterbtn")
-    public WebElement loginelement;
+    private WebElement loginelement;
     @FindBy(id ="errormsg")
-    public WebElement errorelement;
+    private WebElement errorelement;
 
 
     public void loginInvalid(String email, String password, String error){

@@ -12,16 +12,13 @@ public class AlertPage extends BasePage{
     }
 
     @FindBy (css = ".nav-stacked>li>a")
-    public List<WebElement> alertButtons;
-
+    private List<WebElement> alertButtons;
     @FindBy (css = "#OKTab>button")
-    public WebElement alertOk;
-
+    private WebElement alertOk;
     @FindBy (css = "#CancelTab>button")
-    public WebElement alertOkCancel;
-
+    private WebElement alertOkCancel;
     @FindBy (css = "#Textbox>button")
-    public WebElement alertText;
+    private WebElement alertText;
 
     public void acceptAlertProcess(){
         elementMetods.clickelement(alertButtons.get(0));
@@ -38,6 +35,6 @@ public class AlertPage extends BasePage{
     public void fillAlertProcess(String value){
         alertButtons.get(2).click();
         alertText.click();
-        alertMetods.fillAlert("Traian");
+        alertMetods.fillAlert(value);
     }
 }
