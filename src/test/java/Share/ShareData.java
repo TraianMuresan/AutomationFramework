@@ -2,13 +2,8 @@ package Share;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-<<<<<<< HEAD
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-=======
 
->>>>>>> POMBranch
 import java.time.Duration;
 
 public class ShareData {
